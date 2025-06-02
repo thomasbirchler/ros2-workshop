@@ -14,4 +14,11 @@ This repository sets up a ROS 2 Humble environment using Docker and VS Code.
 1. Clone this repo:  
    ```bash
    git clone https://github.com/your-org/ros2-workshop-starter.git
+2. Open it in VS Code.
+3. When prompted, click `Reopen in Container`.
 
+## Directory Layout
+
+- `workspace/src/day01_basics/`: ROS 2 talker/listener example.
+- `.devcontainer/`: Development container config.
+- `day-by-day/`: Day-specific materials (slides, exercises).

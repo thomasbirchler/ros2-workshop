@@ -1,0 +1,31 @@
+{
+	"name": "ROS 2 Workshop",
+  
+	// Use a single docker-compose file from the root of the project
+	"dockerComposeFile": [
+	  "../docker-compose.yaml"
+	],
+  
+	// This must match the 'service' name in your docker-compose.yaml
+	"service": "ros2-dev",
+  
+	// This is the folder VS Code will open inside the container
+	"workspaceFolder": "/home/dev/workspace",
+  
+	// Run as the custom non-root user defined in your Dockerfile
+	"remoteUser": "dev",
+  
+	// Run once the container is up – create the workspace structure
+	"postCreateCommand": "mkdir -p /home/dev/workspace/src",
+  
+	// Add useful VS Code extensions (optional but nice)
+	"customizations": {
+	  "vscode": {
+		"extensions": [
+		  "ms-iot.vscode-ros",
+		  "ms-python.python"
+		]
+	  }
+	}
+  }
+  

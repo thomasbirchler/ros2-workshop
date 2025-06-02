@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  ros2-dev:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    container_name: ros2_dev
+    volumes:
+      - .:/home/dev/workspace
+    working_dir: /home/dev/workspace
+    user: dev
+    # network_mode: host
+    environment:
+      - DISPLAY=${DISPLAY}
+      - ROS_DOMAIN_ID=0
+    command: sleep infinity
+
