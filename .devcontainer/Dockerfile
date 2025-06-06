@@ -4,6 +4,36 @@
 FROM ros:humble
 
 # ─────────────────────────────────────────────────────────────
+# 1 Remove EVERY ROS source shipped in the base image
+#   (there are two: ros2.list and ros2-latest.list)
+#   → apt will not contact the broken mirror in the next step.
+# ─────────────────────────────────────────────────────────────
+RUN find /etc/apt/sources.list.d -type f -name '*ros*' -delete
+
+# ─────────────────────────────────────────────────────────────
+# 2 Install curl & gnupg from Ubuntu repos (these still work)
+# ─────────────────────────────────────────────────────────────
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends curl gnupg lsb-release
+
+# ─────────────────────────────────────────────────────────────
+# 3 Fetch the refreshed Open Robotics key
+#   and recreate a single clean ROS source that uses it
+# ─────────────────────────────────────────────────────────────
+RUN curl -fsSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key \
+    | gpg --dearmor -o /usr/share/keyrings/ros-archive-keyring.gpg && \
+    echo "deb [signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] \
+         http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" \
+    > /etc/apt/sources.list.d/ros2.list
+
+# ─────────────────────────────────────────────────────────────
+# 4 Now the key is valid → refresh metadata & install packages
+# ─────────────────────────────────────────────────────────────
+RUN apt-get update && \
+    apt-get install -y ros-humble-kobuki-ros-interfaces
+
+
+# ─────────────────────────────────────────────────────────────
 # Install useful packages and ROS tools
 # ─────────────────────────────────────────────────────────────
 RUN apt update && apt install -y \
