@@ -8,6 +8,10 @@
   
 	// This must match the 'service' name in your docker-compose.yaml
 	"service": "ros2-dev",
+
+	"containerEnv": {
+ 		 "DISPLAY": "host.docker.internal:0"
+	},
   
 	// This is the folder VS Code will open inside the container
 	"workspaceFolder": "/home/dev/workspace",
@@ -16,7 +20,7 @@
 	"remoteUser": "dev",
   
 	// Run once the container is up – create the workspace structure
-	"postCreateCommand": "mkdir -p /home/dev/workspace/src",
+	"postCreateCommand": "rosdep update && rosdep install --from-paths src --ignore-src -r -y && colcon build --symlink-install && echo 'source install/setup.bash' >> ~/.bashrc",
   
 	// Add useful VS Code extensions (optional but nice)
 	"customizations": {

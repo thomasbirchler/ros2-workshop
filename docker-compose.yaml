@@ -8,6 +8,8 @@ services:
     container_name: ros2_dev
     volumes:
       - .:/home/dev/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    network_mode: host
     working_dir: /home/dev/workspace
     user: dev
     # network_mode: host
@@ -15,4 +17,3 @@ services:
       - DISPLAY=${DISPLAY}
       - ROS_DOMAIN_ID=0
     command: sleep infinity
-
