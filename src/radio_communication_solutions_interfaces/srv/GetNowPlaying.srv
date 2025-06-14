@@ -1,0 +1,8 @@
+# Request (none needed in our case)
+---
+
+# Response
+string station_name
+string song_title
+string artist_name
+string time_played
