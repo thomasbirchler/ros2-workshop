@@ -69,4 +69,4 @@ SHELL ["/bin/bash", "-c"]
 
 # Source ROS on every shell start
 RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
-RUN echo "source /ros2_ws/install/setup.bash" >> /root/.bashrc
+RUN echo "source /ros2_ws/install/setup.bash" >> /home/dev/.bashrc

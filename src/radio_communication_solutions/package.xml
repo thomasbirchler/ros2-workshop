@@ -9,14 +9,10 @@
 
   <buildtool_depend>ament_python</buildtool_depend>
   
-  <build_depend>rclpy</build_depend>
   <exec_depend>rclpy</exec_depend>
 
   <build_depend>std_msgs</build_depend>
   <exec_depend>std_msgs</exec_depend>
-
-  <build_depend>rosidl_default_generators</build_depend>
-  <exec_depend>rosidl_default_runtime</exec_depend>
 
   <exec_depend>radio_communication_solutions_interfaces</exec_depend>
 
@@ -27,6 +23,5 @@
 
   <export>
     <build_type>ament_python</build_type>
-    <rosidl_interface_packages>radio_communication_solutions</rosidl_interface_packages>
   </export>
 </package>
