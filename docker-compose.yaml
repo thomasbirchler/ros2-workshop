@@ -2,6 +2,7 @@ version: "3.9"
 
 services:
   ros2-dev:
+    image: ros2-workshop-amd64:latest
     build:
       context: .
       dockerfile: .devcontainer/Dockerfile
