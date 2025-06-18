@@ -5,7 +5,7 @@ from radio_station_interfaces_sol.action import ChooseSong
 
 class SongRequester(Node):
     def __init__(self, song):
-        super().__init__('song_requester')
+        super().__init__('song_requester_sol')
         self._action_client = ActionClient(self, ChooseSong, 'choose_song')
         self._song = song
         self._action_client.wait_for_server()

@@ -4,7 +4,7 @@ from std_msgs.msg import String
 
 class Broadcaster(Node):
     def __init__(self):
-        super().__init__('broadcaster')
+        super().__init__('broadcaster_sol')
         self.get_logger().info("Node started!")
         self.publisher_ = self.create_publisher(String, '/radio/frequency_102', 10)
         self.timer = self.create_timer(1.0, self.timer_callback)

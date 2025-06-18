@@ -5,7 +5,7 @@ from radio_station_interfaces_sol.action import ChooseSong
 
 class RadioDJ(Node):
     def __init__(self):
-        super().__init__('radio_dj')
+        super().__init__('radio_dj_sol')
         self._srv = ActionServer(
             self,
             ChooseSong,

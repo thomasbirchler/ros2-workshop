@@ -4,7 +4,7 @@ import rclpy
 
 class Listener(Node):
     def __init__(self):
-        super().__init__('listener')
+        super().__init__('listener_sol')
         self.subscription = self.create_subscription(String, 'radio/frequency_102', self.listener_callback, 10)
     
     def listener_callback(self, msg):

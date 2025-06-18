@@ -26,7 +26,6 @@ setup(
             'radio_broadcaster_sol = radio_communication_solutions.radio_broadcaster_sol:main',
             'radio_listener_sol = radio_communication_solutions.radio_listener_sol:main',
             'get_now_playing_service_sol = radio_communication_solutions.get_now_playing_service_sol:main',
-            'minimal_service = radio_communication_solutions.minimal_service:main',
         ],
     },
 )

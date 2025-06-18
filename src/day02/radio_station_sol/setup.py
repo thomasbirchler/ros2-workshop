@@ -20,8 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'radio_dj = radio_station_sol.server_node:main',
-            'song_requester = radio_station_sol.client_node:main',
+            'radio_dj_sol = radio_station_sol.server_node:main',
+            'song_requester_sol = radio_station_sol.client_node:main',
         ],
     },
 )

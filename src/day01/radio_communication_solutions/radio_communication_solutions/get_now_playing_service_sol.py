@@ -5,7 +5,7 @@ from datetime import datetime
 
 class NowPlayingService(Node):
     def __init__(self):
-        super().__init__('now_playing_service')
+        super().__init__('now_playing_service_sol')
         self.srv = self.create_service(GetNowPlaying, 'get_now_playing', self.handle_now_playing)
         self.get_logger().info("Now Playing Service is live!")
 
