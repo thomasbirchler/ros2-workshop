@@ -10,7 +10,7 @@ class NowPlayingService(Node):
         self.get_logger().info("Now Playing Service is live!")
 
     def handle_now_playing(self, request, response):
-        response.station_name = "102 FM"
+        response.station_name = "Radio Educativa 100.3 FM"
         response.song_title = "Bohemian Rhapsody"
         response.artist_name = "Queen"
         response.time_played = datetime.now().strftime("%H:%M:%S")

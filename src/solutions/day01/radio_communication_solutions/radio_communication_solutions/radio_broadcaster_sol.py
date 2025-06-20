@@ -15,6 +15,7 @@ class Broadcaster(Node):
         msg.data = f'We are broadcasting on frequency 102 FM since {self.i} seconds.'
         self.i += 1
         self.publisher_.publish(msg)
+        self.get_logger().info(f'Publishing: "{msg.data}"')
 
 def main():
     rclpy.init()

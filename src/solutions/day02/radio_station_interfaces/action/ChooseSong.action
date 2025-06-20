@@ -1,0 +1,10 @@
+# Goal: what caller tells DJ
+string song_name
+---
+# Result: final DJ reply
+bool success
+string final_message
+---
+# Feedback: in-progress updates
+float32 progress_pct
+string status_line
