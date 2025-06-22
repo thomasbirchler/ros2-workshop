@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 from glob import glob
 import os
 
-package_name = 'radio_communication_solutions'
+package_name = 'radio_communication'
 
 setup(
     name=package_name,
@@ -25,7 +25,6 @@ setup(
         'console_scripts': [
             'publisher = radio_communication.publisher_node:main',
             'subscriber = radio_communication.subscriber_node:main',
-            'get_now_playing_service = radio_communication.get_now_playing_service:main',
         ],
     },
 )

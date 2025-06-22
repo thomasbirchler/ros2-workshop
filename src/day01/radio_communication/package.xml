@@ -14,12 +14,6 @@
   <build_depend>std_msgs</build_depend>
   <exec_depend>std_msgs</exec_depend>
 
-
-<!-- Add the dependency of the interface package, used for service and action-->
-<!-- Template: -->
-<!-- <exec_depend>  package name  </exec_depend> -->
-  
-
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
