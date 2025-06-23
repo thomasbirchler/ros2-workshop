@@ -23,8 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'publisher = radio_communication.publisher_node:main',
-            'subscriber = radio_communication.subscriber_node:main',
+            # Example: 'name = package.module:function',
         ],
     },
 )
