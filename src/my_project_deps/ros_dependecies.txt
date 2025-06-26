@@ -1,0 +1,15 @@
+ros-humble-ament-cmake
+ros-humble-rclcpp
+ros-humble-xacro
+ros-humble-gazebo-ros-pkgs
+ros-humble-gazebo-ros2-control
+ros-humble-turtlebot3-gazebo
+ros-humble-turtlebot3-teleop
+ros-humble-turtlebot3-simulator
+ros-humble-rviz2
+ros-humble-navigation2
+ros-humble-slam-toolbox
+ros-humble-robot-state-publisher
+ros-humble-tf2-tools
+ros-humble-ament-lint-auto
+ros-humble-ament-lint-common

@@ -1,3 +1,6 @@
+# Install dependecies:
+xargs -a ros-dependencies.txt sudo apt install -y
+
 colcon build --packages-select turtlebot3_project
 
 source install/setup.bash
