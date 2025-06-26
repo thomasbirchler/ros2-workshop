@@ -1,0 +1,15 @@
+colcon build --packages-select turtlebot3_project
+
+source install/setup.bash
+
+# to launch TurtleBot3 world in Gezebo:
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+
+# To launch RViz2 for visualization:
+ros2 launch turtlebot3_gazebo view_navigation.launch.py
+
+# To control the Robot:
+ros2 run turtlebot3_teleop teleop_keyboard
+
+# Autonomoues Robot:
+ros2 run turtlebot3_gazebo turtlebot3_drive
