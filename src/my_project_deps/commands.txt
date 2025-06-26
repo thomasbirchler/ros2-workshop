@@ -2,7 +2,7 @@
 git submodule update --init --recursive
 
 # Install dependecies:
-xargs -a ros-dependencies.txt sudo apt install -y
+xargs -a ros_dependencies.txt sudo apt install -y
 
 colcon build --packages-select turtlebot3_project
 
