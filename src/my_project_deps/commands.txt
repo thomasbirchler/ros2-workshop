@@ -1,3 +1,6 @@
+# Clone TurtleBot Submodule:
+git submodule update --init --recursive
+
 # Install dependecies:
 xargs -a ros-dependencies.txt sudo apt install -y
 
