@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 from glob import glob
 import os
 
-package_name = 'radio_station'
+package_name = 'wall_follower'
 
 setup(
     name=package_name,
